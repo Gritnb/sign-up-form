@@ -9,7 +9,9 @@
     src: url(assets/fonts/Montserrat-VariableFont_wght.ttf);
 }
 /*CSS Resets*/
-*, *::before, *::after {
+*,
+*::before, 
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -29,7 +31,8 @@ img {
     vertical-align: middle;
 }
 
-input, button, textarea, select {
+input,
+button {
     font: inherit;
 }
 
@@ -42,11 +45,15 @@ p {
     font-size: 62.5%;
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --link-color: RGB(220, 220, 220);
+    --background-color: RGB(243, 243, 243);
+    --box-shadow: inset 7px 0 9px -7px RGBA(0, 0, 0, 0.7);
+    --company-theme: #FF8B1F;
 }
 
 main {
     display: flex;
     height: 100%;
+    flex: 1;
 }
 /*Layout*/
 /*Aside Styling*/
@@ -57,6 +64,8 @@ aside {
     background-repeat: no-repeat;
     width: max(40%, 600px);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 /*Logo and Company Name*/
 .contrast-container {
@@ -72,7 +81,6 @@ aside {
 }
 
 .company-image {
-    filter: drop-shadow(1px 1px 3px RGBA(255, 0, 0, 0.6));
     width: calc(4rem + 1.5vw);
     aspect-ratio: 1;
     object-fit: cover;
@@ -84,7 +92,6 @@ aside {
     font-family: Splash, var(--system-ui);
     font-size: calc(3rem + 1.5vw);
     text-shadow: 1px 1px 5px RGBA(0, 0, 0, 0.9);
-    user-select: none;
     color: white;
 }
 
@@ -92,33 +99,190 @@ aside {
     font-family: Montserrat, var(--system-ui);
     font-size: x-small;
 }
-
 /*Image credits*/
 .image-footer {
     font-family: Montserrat, var(--system-ui);
     font-size: 1.3rem;
     font-style: italic;
     font-weight: 400;
-    position: relative;
-    top: 86.5%;
-    padding-left: 1rem;
     color: white;
+    position: relative;
+    top: 86%;
+    text-align: center;
 }
 
 a {
     text-decoration: none;
     color: var(--link-color);
+    transition-duration: 0.6s;
 }
 
 a:visited {
     color: var(--link-color);
 }
 
+a:hover {
+    color: white;
+}
 /*Form Styling*/
 .form-container {
     width: 100%;
-    box-shadow: inset 7px 0 9px -7px RGBA(0, 0, 0, 0.7);
 }
+
+.service-description {
+    background-color: var(--background-color);
+    font-family: Montserrat, var(--system-ui);
+    font-size: 2.3rem;
+    position: relative;
+    height: 36.3%;
+    padding-left: 4.2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.description,
+.teaser {
+    position: relative;
+}
+
+.description {
+    top: 40%;
+}
+
+.teaser {
+    top: 47%;
+}
+
+.italic {
+    font-style: italic;
+}
+/*Form*/
+.signup-form {
+    box-shadow: 1px 5px 7px RGBA(0, 0, 0, 0.1);
+    position: relative;
+    height: 30%;
+}
+
+.form-header {
+    font-family: Montserrat, var(--system-ui);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0.75rem 0 0.6rem 4.2rem;
+}
+
+form {
+    font-family: Montserrat, var(--system-ui);
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    height: 110%;
+}
+
+input {
+    width: 130%;
+    height: 3rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+input:valid {
+    border: 1px solid lightgreen;
+}
+
+input:invalid {
+    border: 1px solid crimson;
+}
+
+input:focus {
+    border: 1px solid blue;
+    box-shadow: 1px 4px 7px 1px #D3D3D3;
+    outline-width: 0px;
+}
+
+.phone-optional {
+    font-size: 0.9em;
+}
+
+.user-info {
+    display: flex;
+    gap: 15rem;
+    padding-left: 4.2rem;
+    margin-bottom: 2.2rem;
+    align-items: center;
+}
+
+.user-info > * {
+    display: flex;
+    flex-direction: column;    
+}
+
+.user-info,
+.button-container {
+    flex: 1;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 4.2rem;
+}
+
+.internal {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4.2rem;
+    flex: 1;
+    gap: 1.5rem;
+}
+
+.signup-btn {
+    background-color: #FFA24C;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 10px 46px;
+    align-self: flex-start;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: var(--company-theme);
+}
+
+.signup-btn:active {
+    transform: translateY(2px);
+}
+
+.sign-in-prt {
+    font-size: 1.25rem;
+    letter-spacing: 0.04rem;
+}
+
+.login {
+    color: var(--company-theme);
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.login:hover {
+    color: black;
+}
+
+.service-footer {
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    height: 33.7%;
+}
+
 /*Footer Section*/
 footer {
     background: RGBA(0, 0, 0, 0.8);
@@ -127,10 +291,10 @@ footer {
     font-size: 1.5rem;
     color: var(--link-color);
     display: flex;
+    height: 3rem;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex: 1;
     padding: 5px;
 }
 
