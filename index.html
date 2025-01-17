@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
-        <title>Summer Time | Sign up</title>
+        <title>Summer Time | Sign Up</title>
         <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     </head>
     <body>
@@ -16,18 +16,76 @@
                          class="company-image">
                     <p class="company-name">Summer Time<span class="registered">®</span></p>
                 </div>
-                <div class="image-footer">
-                    <p>Image by <a href="https://unsplash.com/@zamax"
-                                   target="_blank">Gustavo Zambelli</a></p>
-                </div>
+                <p class="image-footer">Image by <a href="https://unsplash.com/@zamax" target="_blank">Gustavo Zambelli</a></p>
             </aside>
             <div class="form-container">
-                <div class="form-wrapper">
-
+                <div class="service-description">
+                    <p class="description">Set sail on the adventure of a lifetime with Summer Time! Discover stunning destinations, savor world-class dining, indulge in luxury, and create unforgettable memories.</p>
+                    <p class="teaser">Don't wait-<span class="italic">jump on board!</span></p>
+                </div>
+                <div class="signup-form">
+                    <p class="form-header">Let's do this!</p>
+                    <form action="#" method="post">
+                        <div class="user-info">
+                            <div class="username">
+                                <label for="first-name">FIRST NAME</label>
+                                <input type="text"
+                                       id="first-name"
+                                       minlength="3"
+                                       maxlength="20"
+                                       required>
+                            </div>
+                            <div class="lastname">
+                                <label for="last-name">LAST NAME</label>
+                                <input type="text"
+                                       id="last-name"
+                                       minlength="3"
+                                       maxlength="20"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="email">
+                                <label for="email">EMAIL</label>
+                                <input type="email"
+                                       id="email"
+                                       required>
+                            </div>
+                            <div class="phone">
+                                <label for="phone">PHONE NUMBER <span class="phone-optional">(OPTIONAL)</span></label>
+                                <input type="tel"
+                                       id="phone">
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <div class="password">
+                                <label for="password">PASSWORD</label>
+                                <input type="password"
+                                       id="password"
+                                       minlength="12"
+                                       required>
+                            </div>
+                            <div class="passwordrp">
+                                <label for="pawswordrp">CONFIRM PASSWORD</label>
+                                <input type="text"
+                                       id="passwordrp"
+                                       minlength="12"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="internal">
+                                <button type="button"
+                                        class="signup-btn">Create Account</button>
+                                <p class="sign-in-prt">Already have an account? <span class="login">Log in</span></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="service-footer">
                 </div>
             </div>
         </main>
-
         <footer>
             <p>© 2025 GCarlott.</p>
             <a href="https://github.com/Gritnb/sign-up-form">
